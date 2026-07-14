@@ -64,6 +64,10 @@ The demo ingests a sample bug ticket and shows the guardrail feedback loop in ac
 ships a wrong operator, the behaviour check fails, the error is fed back through the seed, and the
 second attempt passes and is approved at the Human Gate.
 
+## Architecture decisions
+
+Significant design decisions are recorded as [MADR](https://adr.github.io/madr/) Architecture Decision Records under [`docs/decisions/`](docs/decisions/) — synchronous interfaces, the local-shell sandbox, fail-fast checks, stateless agents + reseeding, and the guardrail halt caps.
+
 ## Scope & extension points
 
 - **Sandbox isolation** — `LocalSandbox` scrubs proxy/network env vars but is a process, not a
